@@ -1,34 +1,29 @@
 #include "sort.h"
-#include <stddef.h>
 
 /**
- * bubble_sort - sorts the array in numerical order
- *
- * @arr: The array to be sorted
- * @size: The size of arr
+ * bubble_sort - functiom
+ * @array: Array to be sorted
+ * @size: Size of array
+ * Description: Function that sorts an array using the bubble sort method
+ * Return: 0
  */
-
-void bubble_sort(int arr[], size_t size)
+void bubble_sort(int *array, size_t size)
 {
-size_t i = 0, j = 0, temp;
-bool swapped;
-if (!arr || size == 0)
+unsigned int i, j;
+
+if (!array)
 return;
+
 for (i = 0; i < size - 1; i++)
 {
-swapped = false;
 for (j = 0; j < size - i - 1; j++)
 {
-if (arr[j] > arr[j + 1])
+if (array[j] > array[j + 1])
 {
-temp = arr[j];
-arr[j] = arr[j + 1];
-arr[j + 1] = temp;
-swapped = true;
-print_array(arr, size);
+swap(&array[j], &array[j + 1]);
+print_array(array, size);
 }
 }
-if (swapped == false)
-break;
 }
 }
+
