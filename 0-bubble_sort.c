@@ -6,7 +6,7 @@
  * bubble_sort - sorts the array in numerical order
  *
  * @arr: The array to be sorted
- * @size: The size of arr
+ * @size: The size
  */
 
 void bubble_sort(int arr[], size_t size)
